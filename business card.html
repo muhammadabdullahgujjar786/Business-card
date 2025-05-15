@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Muhammad Abdullah - 3D Business Card</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+  body, html {
+    margin: 0; padding: 0; height: 100vh;
+    background: #0f2027;  /* dark gradient */
+    background: linear-gradient(135deg, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .card-container {
+    perspective: 1500px;
+    width: 350px;
+    height: 220px;
+  }
+
+  .card {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: pointer;
+    position: relative;
+  }
+
+  .card:hover {
+    transform: rotateY(180deg);
+  }
+
+  .side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    backface-visibility: hidden;
+    color: #fff;
+    padding: 30px 25px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .front {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    box-shadow: inset 0 0 50px rgba(255,255,255,0.2);
+  }
+
+  .back {
+    background: linear-gradient(135deg, #434343, #000000);
+    transform: rotateY(180deg);
+  }
+
+  .name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(255,255,255,0.7);
+  }
+
+  .job-title {
+    font-size: 18px;
+    font-weight: 500;
+    opacity: 0.85;
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    font-size: 15px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    opacity: 0.9;
+  }
+
+  .contact-item i {
+    font-size: 18px;
+    color: #ffce00;
+    width: 22px;
+    text-align: center;
+  }
+
+  a.website-link {
+    color: #ffce00;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  a.website-link:hover {
+    color: #fff;
+  }
+</style>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+</head>
+<body>
+  <div class="card-container" tabindex="0" aria-label="Business card of Muhammad Abdullah">
+    <div class="card">
+      <!-- Front Side -->
+      <div class="side front">
+        <div class="name">Muhammad Abdullah</div>
+        <div class="job-title">Web Developer</div>
+        <div class="contact-item"><i class="fa fa-envelope"></i> upworkabdullah027@gmail.com</div>
+        <div class="contact-item"><i class="fa fa-phone"></i> 03167608652</div>
+        <div class="contact-item">
+          <i class="fa fa-globe"></i> 
+          <a href="https://pakisstanwheels.com" target="_blank" class="website-link" rel="noopener">pakisstanwheels.com</a>
+        </div>
+      </div>
+
+      <!-- Back Side -->
+      <div class="side back">
+        <div class="name" style="text-align:center; margin-bottom: 10px;">Muhammad Abdullah</div>
+        <div style="text-align:center; font-size: 16px; opacity: 0.8; margin-bottom: 25px;">Creative and reliable web developer ready to build amazing projects!</div>
+        <div style="display: flex; justify-content: center; gap: 25px;">
+          <a href="https://www.fiverr.com" target="_blank" aria-label="Fiverr" style="color:#ffce00; font-size: 24px;"><i class="fa-brands fa-fiverr"></i></a>
+          <a href="https://www.upwork.com" target="_blank" aria-label="Upwork" style="color:#ffce00; font-size: 24px;"><i class="fa-brands fa-upwork"></i></a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" aria-label="LinkedIn" style="color:#ffce00; font-size: 24px;"><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
